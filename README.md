@@ -15,5 +15,7 @@
 
 通过protobuf的proto文件生成你自己的代码进行反序列化
 
+![image](image/shiyon.png)
 
+还有好多值我没有进protobuf如果需要你可以看浏览器的控制台打印的消息自己添加进protobuf里面在修改一下 c#项目代码
 
