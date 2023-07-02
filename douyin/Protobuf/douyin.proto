@@ -1,0 +1,31 @@
+syntax="proto3";
+
+package douyin;
+
+
+message Data{
+    
+    
+    string Content=1;
+    string EventTime=2;
+    User User=3;
+    int32 LikeUpCount=4;
+    string Method=5;
+    Gift Gift=6;
+}
+
+
+message User{
+    string Name=2;
+    string ImgUrl=1;
+}
+
+message Gift{
+    
+    int32 DiamondCount=1;
+    string Duration=2;
+    string ID=3;
+    string ImgUrl=4;
+    string Name=5;
+    string GroupCount=6;
+}
