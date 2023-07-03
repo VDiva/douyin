@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/KGtOpG/owtVF3ioz3q4PTtauCeREZY0UJQNRLYBju5nj2dluDZvD5MUJFri+XuEoRkjfMc89QZN3oMy/1o3GQ==",
+  "dgSpecHash": "NhRnxE886SG6n97R+6vD7cdaruQLC3p96qdROTh19edx7gVhukuYGQnWzx1hENxwOxhu3f5WNRo1OUOqjytzzg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\smr\\Desktop\\douyin\\Project\\douyin\\douyin.csproj",
+  "projectFilePath": "D:\\Github\\douyin\\douyin\\Project\\douyin\\douyin.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\smr\\.nuget\\packages\\fleck\\1.2.0\\fleck.1.2.0.nupkg.sha512",
     "C:\\Users\\smr\\.nuget\\packages\\google.protobuf\\3.23.3\\google.protobuf.3.23.3.nupkg.sha512",

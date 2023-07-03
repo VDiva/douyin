@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\smr\\Desktop\\douyin\\Project\\douyin\\douyin.csproj": {}
+    "D:\\Github\\douyin\\douyin\\Project\\douyin\\douyin.csproj": {}
   },
   "projects": {
-    "C:\\Users\\smr\\Desktop\\douyin\\Project\\douyin\\douyin.csproj": {
+    "D:\\Github\\douyin\\douyin\\Project\\douyin\\douyin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\smr\\Desktop\\douyin\\Project\\douyin\\douyin.csproj",
+        "projectUniqueName": "D:\\Github\\douyin\\douyin\\Project\\douyin\\douyin.csproj",
         "projectName": "douyin",
-        "projectPath": "C:\\Users\\smr\\Desktop\\douyin\\Project\\douyin\\douyin.csproj",
+        "projectPath": "D:\\Github\\douyin\\douyin\\Project\\douyin\\douyin.csproj",
         "packagesPath": "C:\\Users\\smr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\smr\\Desktop\\douyin\\Project\\douyin\\obj\\",
+        "outputPath": "D:\\Github\\douyin\\douyin\\Project\\douyin\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\smr\\AppData\\Roaming\\NuGet\\NuGet.Config",

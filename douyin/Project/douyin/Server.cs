@@ -98,7 +98,7 @@ namespace douyin
                         ImgUrl = dataMap.user.imgUrl
                     };
                     data.Content = dataMap.content;
-                    Console.WriteLine("聊天消息:" + data.User.Name + data.Content);
+                    Console.WriteLine("聊天消息:" + data.User.Name+":" + data.Content);
 
 
                     //foreach (var item in Clients)
