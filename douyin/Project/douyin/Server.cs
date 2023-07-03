@@ -34,6 +34,7 @@ namespace douyin
             
 
             ServerData.server = service;
+            
             service.Setup(new TouchSocketConfig()//加载配置
                 .UsePlugin()
                 .SetListenIPHosts(new IPHost[] { new IPHost(9999),new IPHost(8888) })
@@ -81,23 +82,23 @@ namespace douyin
         public static void Send(string text)
         {
             JObject jobject = JsonConvert.DeserializeObject(text) as JObject;
-            Data data=null;
+            Data data = null;
             dynamic dataMap = jobject;
 
 
             data = new Data();
-            data.Method = dataMap.common.method;
-            
+            data.Method = dataMap.method;
+
             switch (data.Method)
             {
                 case "WebcastChatMessage":
                     data.User = new User
                     {
-                        Name = dataMap.user.nickname,
-                        ImgUrl = dataMap.user.avatarThumb.urlListList[0]
+                        Name = dataMap.user.nickName,
+                        ImgUrl = dataMap.user.imgUrl
                     };
                     data.Content = dataMap.content;
-                    Console.WriteLine("聊天消息:" + data.User.Name+":" + data.Content);
+                    Console.WriteLine("聊天消息:" + data.User.Name + data.Content);
 
 
                     //foreach (var item in Clients)
@@ -119,10 +120,10 @@ namespace douyin
                 case "WebcastLikeMessage":
                     data.User = new User
                     {
-                        Name = dataMap.user.nickname,
-                        ImgUrl = dataMap.user.avatarThumb.urlListList[0]
+                        Name = dataMap.user.nickName,
+                        ImgUrl = dataMap.user.imgUrl
                     };
-                    data.LikeUpCount = dataMap.count;
+                    data.LikeUpCount = dataMap.likeCount;
                     Console.WriteLine("点赞消息:" + data.User.Name + ":点了" + data.LikeUpCount + "个赞");
 
 
@@ -147,8 +148,8 @@ namespace douyin
                 case "WebcastGiftMessage":
                     data.User = new User
                     {
-                        Name = dataMap.user.nickname,
-                        ImgUrl = dataMap.user.avatarThumb.urlListList[0]
+                        Name = dataMap.user.nickName,
+                        ImgUrl = dataMap.user.imgUrl
                     };
                     data.Gift = new Gift
                     {
@@ -157,7 +158,7 @@ namespace douyin
                         Duration = dataMap.gift.duration,
                         ID = dataMap.gift.id,
                         GroupCount = dataMap.groupCount,
-                        ImgUrl = dataMap.gift.image.urlListList[0]
+                        ImgUrl = dataMap.gift.image
                     };
                     Console.WriteLine("礼物消息消息:" + data.User.Name + ":送了价值" + data.Gift.Duration + "的" + data.Gift.Name + "x" + data.Gift.DiamondCount);
 
@@ -186,7 +187,7 @@ namespace douyin
 
 
 
-            //Console.WriteLine(data.Method);
+            //Console.WriteLine(text);
 
 
 
@@ -195,7 +196,7 @@ namespace douyin
                 try
                 {
 
-                    item.SendWithWS(JsonConvert.SerializeObject(data));
+                    item.SendWithWS(JsonConvert.SerializeObject(text));
                 }
                 catch (Exception ex)
                 {
@@ -212,7 +213,7 @@ namespace douyin
     public class TcpServer : RpcServer
     {
         private readonly ILog m_logger;
-
+        private HttpSocketClient httpClient;
         public TcpServer(ILog logger)
         {
             this.m_logger = logger;
@@ -227,6 +228,20 @@ namespace douyin
                 if (socketClient.SwitchProtocolToWebSocket(callContext.HttpContext))
                 {
                     m_logger.Info("WS通过WebApi连接"+socketClient.ServicePort);
+
+                    if (socketClient.ServicePort == 999)
+                    {
+                        if (httpClient != null)
+                        {
+                            httpClient.Close();
+                            httpClient = socketClient;
+                        }
+                        else
+                        {
+                            httpClient = socketClient;
+                        }
+                    }
+
                     if (socketClient.ServicePort == 8888)
                     {
                         ServerData.AddClient(socketClient);

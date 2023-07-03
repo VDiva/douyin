@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ME\\douyin\\douyin\\Project\\douyin\\douyin.csproj": {}
+    "C:\\Users\\smr\\Desktop\\douyin\\Project\\douyin\\douyin.csproj": {}
   },
   "projects": {
-    "D:\\ME\\douyin\\douyin\\Project\\douyin\\douyin.csproj": {
+    "C:\\Users\\smr\\Desktop\\douyin\\Project\\douyin\\douyin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ME\\douyin\\douyin\\Project\\douyin\\douyin.csproj",
+        "projectUniqueName": "C:\\Users\\smr\\Desktop\\douyin\\Project\\douyin\\douyin.csproj",
         "projectName": "douyin",
-        "projectPath": "D:\\ME\\douyin\\douyin\\Project\\douyin\\douyin.csproj",
-        "packagesPath": "C:\\Users\\s\\.nuget\\packages\\",
-        "outputPath": "D:\\ME\\douyin\\douyin\\Project\\douyin\\obj\\",
+        "projectPath": "C:\\Users\\smr\\Desktop\\douyin\\Project\\douyin\\douyin.csproj",
+        "packagesPath": "C:\\Users\\smr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\smr\\Desktop\\douyin\\Project\\douyin\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\s\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\smr\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -73,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
