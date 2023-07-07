@@ -1,7 +1,10 @@
 # douyin
 爬取抖音直播间弹幕和礼物信息
 
+好像这个方法并不实用 抖音会变化脚本名称每次更新都需要更新脚本名才能爬取
+
 目前只能微软edge浏览器使用 需要在edge浏览器开发者工具中添加本地代码覆盖选择Browser injection/js替换
+
 
 
 ![image](image/tihuan.png)
